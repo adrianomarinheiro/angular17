@@ -1,0 +1,8 @@
+<div>    
+    <loading-component [show]="loading"></loading-component>
+  <ul>
+    <li *ngFor="let item of items">
+        <a class="mdl-button mdl-js-button mdl-button--raised" routerLink="/user/{{ item.id }}">{{ item.name }}</a>
+    </li>
+  </ul>
+</div>
