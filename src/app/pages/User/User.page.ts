@@ -16,9 +16,9 @@ export class UserPage {
     phone: new FormControl('', Validators.required),
   });
 
-  private userId: string = '';
+  userId: string = '';
   private docId: string = '';
-  private loading: boolean = false;
+  loading: boolean = false;
 
   constructor(
     private route: ActivatedRoute,

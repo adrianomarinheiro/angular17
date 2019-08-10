@@ -1,7 +1,10 @@
 <div>    
     <loading-component [show]="loading"></loading-component>
+  
+  <input type="text" name="filter" (keyup)="setFilterBy($event)" />
+
   <ul>
-    <li *ngFor="let item of items">
+    <li *ngFor="let item of items | filter: filterBy">
         <a class="mdl-button mdl-js-button mdl-button--raised" routerLink="/user/{{ item.id }}">{{ item.name }}</a>
     </li>
   </ul>

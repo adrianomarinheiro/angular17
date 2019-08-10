@@ -8,8 +8,16 @@ import { UsersService } from '../../services/Users.service';
 
 export class UserListPage {
 
-  private loading = true;
-  private items = [];
+  loading = true;
+  items = [];
+  filterBy: string = '';
+  orderBy: string = '';
+
+  setFilterBy(event: any) {
+    this.filterBy = event.target.value;
+  }
+
+  
 
   constructor(
     private usersService: UsersService
