@@ -1,0 +1,33 @@
+<div>
+    <loading-component [show]="loading"></loading-component>
+  
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <input type="text" name="name" formControlName="name" placeholder="Nome" />
+      <div *ngIf="userForm.controls.name.invalid && userForm.controls.name.touched">
+        O campo Nome é obrigatório!
+      </div>
+      <br>
+  
+      <input type="email" name="email" formControlName="email" placeholder="E-mail" />
+      <div *ngIf="userForm.controls.email.invalid && userForm.controls.email.touched">
+        O campo E-mail é obrigatório!
+      </div>
+      <br>
+  
+      <input type="number" name="age" formControlName="age" placeholder="Idade" />
+      <br>
+  
+      <input type="phone" name="phone" formControlName="phone" placeholder="Telefone" />
+      <div *ngIf="userForm.controls.phone.invalid && userForm.controls.phone.touched">
+        O campo Telefone é obrigatório!
+      </div>
+      <br>
+  
+      <button type="submit" [disabled]="!userForm.valid">
+        <span *ngIf="!userId">Criar</span>
+        <span *ngIf="userId">Atualizar</span>
+      </button>
+    </form>
+  
+  
+  </div>

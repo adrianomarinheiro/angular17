@@ -9,7 +9,6 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -19,6 +18,7 @@ import { UserListPage } from './pages/UserList/UserList.page';
 import { UserPage } from './pages/User/User.page';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { FilterPipe } from './pipes/filter.pipe';
+import { OrderPipe } from './pipes/order.pipe';
 
 
 @NgModule({
@@ -29,6 +29,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     UserListPage,
     UserPage,
     FilterPipe,
+    OrderPipe, 
+    
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

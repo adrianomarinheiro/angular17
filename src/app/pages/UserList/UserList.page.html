@@ -1,11 +1,15 @@
-<div>    
+<div class="cadastro">
+  <a class="mdl-button mdl-js-button mdl-button--colored" routerLink="/user/">Cadastrar Novo Usuário</a>
+</div>
+<hr>
+<div class="content">    
     <loading-component [show]="loading"></loading-component>
   
-  <input type="text" name="filter" (keyup)="setFilterBy($event)" />
+  <input class="busca" type="text" name="filter" (keyup)="setFilterBy($event)" placeholder="Digite o nome que deseja encontrar..."/>
 
-  <ul>
-    <li *ngFor="let item of items | filter: filterBy">
-        <a class="mdl-button mdl-js-button mdl-button--raised" routerLink="/user/{{ item.id }}">{{ item.name }}</a>
+  <ul class="lista">
+    <li *ngFor="let item of items | filter: filterBy | order: orderBy">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent" routerLink="/user/{{ item.id }}">{{ item.name }}</a>
     </li>
   </ul>
 </div>

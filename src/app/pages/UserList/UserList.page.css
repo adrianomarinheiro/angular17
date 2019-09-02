@@ -1,0 +1,23 @@
+
+.busca {
+    width: 80%;
+    border: solid 1px #000;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.content{
+    text-align: center;
+}
+.lista {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.cadastro{
+   text-align: center;
+}
+.mdl-button--accent {
+    color: brown;
+}

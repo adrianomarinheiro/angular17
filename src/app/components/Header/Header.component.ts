@@ -5,4 +5,13 @@ import { Component } from '@angular/core';
   templateUrl: './Header.component.html',
   styleUrls: ['./Header.component.css']
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+
+  show = false;
+
+  constructor() { }
+
+  toggleCollapse() {
+    this.show = !this.show
+  }
+}

@@ -1,4 +1,4 @@
-<div>
+<div class="content">
   <loading-component [show]="loading"></loading-component>
 
   <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
@@ -29,5 +29,7 @@
     </button>
   </form>
 
-
+<div>
+  <a class="mdl-button mdl-js-button mdl-button--colored" routerLink="/home/">Voltar para página Principal</a>
+</div>
 </div>
